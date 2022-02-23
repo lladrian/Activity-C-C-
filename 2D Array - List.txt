@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+void main () {	
+
+	  int row = 8,column= 6,counter=0,key,i,j,total;
+
+   //Array content
+int arr[8][6] = {{ 5, 0, 0, 0, 0, 0},
+                 { 0, 1, 0, 0, 0, 0},
+                 { 0, 0, 8, 0, 0, 0},     
+                 { 0, 0, 0, 0, 0, 0},        
+                 { 0, 0, 0, 6, 0, 0},
+                 { 0, 0, 0, 0, 0, 4},        
+                 { 0, 0, 0, 0, 2, 0},
+                 { 0, 0, 0, 7, 0, 0}};
+
+//to display the array  
+    printf("Display Array:\n");
+   for (i=0; i<row; i++) 	{ //controls the row
+        printf("\t ");//horizontal tab
+        for (j=0; j<column; j++) 	{ //controls the column
+            printf(" %d ", arr[i][j]);
+              //execute this statement if the condition is true.
+              key=arr[i][j];
+            if(key==0){
+              counter++; //count the number of zeroes
+            }
+        }
+        printf("\n\n");//newline  
+   }
+          
+//to identify and display whether it is sparse matrix or not.
+//to make it look appealing(optional).
+     //counter == number of zeroes
+     //total == total divide by 2
+     // 48 / 2 = 24
+     //counter > 24
+            total = column * row;     
+      if(counter>total/2) {
+      printf("       ______________________ \n");
+      printf("      |    Sparse Matrix     |\n");
+      printf("      |________ _____ _______|\n");
+      printf("      | Column | Row | Value |\n");
+      printf("      +~~~~~~~~+~~~~~+~~~~~~~+\n");
+      } else if(counter<total) {
+      printf("       ______________________ \n");
+      printf("      |  Not  Sparse Matrix  |\n");
+      printf("      |________ _____ _______|\n");
+      printf("      | Column | Row | Value |\n");
+      printf("      +~~~~~~~~+~~~~~+~~~~~~~+\n");
+      }      
+
+//to display the non-zero           
+            for(i=0;i<row;i++) { //controls the row
+                 for(j=0;j<column;j++) { //controls the column 
+                     key = arr[i][j];
+                     if(key!=0) {
+                       //execute this statement if the condition is true.
+                       printf("      |   [%d]  | [%d] |   %d   |\n",j,i,key);
+                     }        
+                 }
+            }
+               
+       //to make it look appealing(optional).            
+       printf("      +~~~~~~~~+~~~~~+~~~~~~~+\n\n\n");
+   
+}
