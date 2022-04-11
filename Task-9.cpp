@@ -1,3 +1,12 @@
+/* 
+     Author : Adrian C. Manatad
+       Date : March 05, 2022
+     Reason : for commission   
+     
+   
+*?
+
+
 #include <iostream>
 using namespace std;
 int main()
