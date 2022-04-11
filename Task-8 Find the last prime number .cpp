@@ -1,3 +1,15 @@
+/* 
+     Author : Adrian C. Manatad
+       Date : February 28, 2022
+     Reason : for commission
+
+Task 8: Create a program in C++ that will accept a number and find the last prime number occur before the entered number. 
+Sample Output:
+Input a number to find the last prime number occurs before the 
+number: 75
+71 is the last prime number before 75
+    
+ */
 #include <iostream>
 
 using namespace std;
